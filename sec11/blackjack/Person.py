@@ -23,4 +23,8 @@ class Person():
     
     """Return person's name and hand value"""
     def __str__(self):
-        return f"{self.name}'s hand value is {self.value}"
+        return "{} | card/s: {} | value: {}".format(self.name, len(self), self.value)
+    
+    """Return person's no. of cards in hand"""
+    def __len__(self):
+        return len(self.hand)
