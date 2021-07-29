@@ -47,13 +47,13 @@ class Player(Person):
     
     """Update bankroll after winning bet"""
     def wins(self):
-        print("{} wins!".format(self.name))
+        print("{} wins! Hand value is {}.".format(self.name, self.value))
         
         self.bankroll += self.bet
         
     """Update bankroll after losing bet"""
     def loses(self):
-        print("{} loses.".format(self.name))
+        print("{} loses. Hand value is {}.".format(self.name, self.value))
         
         self.bankroll -= self.bet
     
