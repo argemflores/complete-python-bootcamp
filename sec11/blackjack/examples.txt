@@ -1,0 +1,76 @@
+Examples
+
+Enter player's name: Argem
+Enter player's bankroll: 100
+Enter dealer's name: Gerald
+Argem, place your bet (bankroll: 100.0): 20
+Bet placed: 20.0 | Bankroll: 100.0
+Gerald's cards
+  [1] King of Clubs
+Argem's cards
+  [1] Nine of Diamonds
+  [2] Four of Diamonds
+  Value: 13
+Argem, do you want to [1] hit or [2] stay? 1
+Argem's cards
+  [1] Nine of Diamonds
+  [2] Four of Diamonds
+  [3] Five of Clubs
+  Value: 18
+Argem, do you want to [1] hit or [2] stay? 2
+Gerald's cards
+  [1] King of Clubs
+  [2] Three of Clubs
+  Value: 13
+Gerald's cards
+  [1] King of Clubs
+  [2] Three of Clubs
+  [3] Nine of Hearts
+  Value: 22
+Argem wins! Hand value is 18.
+Continue playing (Y or N)? N
+Thanks for playing!
+Player Argem earnings: 120.0
+
+➜  blackjack git:(main) ✗ python3
+Python 3.9.5 (default, May  4 2021, 03:29:30) 
+[Clang 11.0.0 (clang-1100.0.33.17)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import Blackjack
+Enter player's name: Argem
+Enter player's bankroll: 100
+Enter dealer's name: Gerald
+Argem, place your bet (bankroll: 100.0): 20
+Bet placed: 20.0 | Bankroll: 100.0
+Gerald's cards
+  [1] Ten of Clubs
+Argem's cards
+  [1] Two of Diamonds
+  [2] Two of Clubs
+  Value: 4
+Argem, do you want to [1] hit or [2] stay? 1
+Argem's cards
+  [1] Two of Diamonds
+  [2] Two of Clubs
+  [3] Queen of Hearts
+  Value: 14
+Argem, do you want to [1] hit or [2] stay? 1
+Argem's cards
+  [1] Two of Diamonds
+  [2] Two of Clubs
+  [3] Queen of Hearts
+  [4] Six of Diamonds
+  Value: 20
+Argem, do you want to [1] hit or [2] stay? 2
+Gerald's cards
+  [1] Ten of Clubs
+  [2] Eight of Hearts
+  Value: 18
+Gerald's cards
+  [1] Ten of Clubs
+  [2] Eight of Hearts
+  Value: 18
+Argem wins! Hand value is 20.
+Continue playing (Y or N)? N
+Thanks for playing!
+Player Argem earnings: 120.0
