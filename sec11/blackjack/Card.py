@@ -1,7 +1,6 @@
 """
 Card: playing card in a normal deck
 """
-
 class Card():
     """Class attributes"""
     suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
