@@ -22,6 +22,25 @@ class Card():
         # Ace counts as 1 or 11 depending on the player's choice
         self.value = value
     
+    """Ask player to choose the value of the Ace card for their hand (1 or 11)"""
+    def choose_value(self):
+        # prepare prompt and value to ask player
+        prompt = "Choose Ace card value ({}): ".format(" or ".join([str(value) for value in self.value]))
+        value = 0
+        
+        # continue asking player until correct value is entered
+        while True:
+            # check entered card value
+            if value not in self.value:
+                # ask again if entered value is incorrect
+                value = int(input(prompt))
+            else:
+                # correct value
+                break
+        
+        # return chosen value
+        self.value = value
+    
     """Return details about the card"""
     def __str__(self):
         return "{} of {}".format(self.rank, self.suit)
