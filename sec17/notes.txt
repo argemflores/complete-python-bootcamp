@@ -1,0 +1,5 @@
+1. Open Terminal
+2. Go to ~/Workspace/complete-python-bootcamp/sec17
+3. Activate pdfenv: conda activate pdfenv
+4. Run: jupyter notebook
+5. Open notebook from Chrome (http://localhost:8889/)
