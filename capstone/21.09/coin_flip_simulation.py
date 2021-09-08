@@ -19,7 +19,7 @@ class CoinFlip:
     # define constants for a coin's heads and tails
     HEADS = 0
     TAILS = 1
-    COIN = {HEADS: 'head', TAILS: 'tail'}
+    COIN = {HEADS: 'heads', TAILS: 'tails'}
 
     # define constants for minimum and maximum flips
     MIN_FLIPS = 1
