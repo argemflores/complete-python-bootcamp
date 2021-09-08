@@ -1,0 +1,6 @@
+# 21.09.08
+    - Vigenere / Vernam / Ceasar Ciphers
+    - Pig Latin
+    - Coin Flip Simulation
+    - GIF Creator
+    - Recipe Creator and Manager
