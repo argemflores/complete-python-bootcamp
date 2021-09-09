@@ -6,9 +6,9 @@
     // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
     // Placeholders with the same ids are connected.
 
-    "template": {
+    "new_file": {
         "scope": "python",
-        "prefix": "template",
+        "prefix": "new_file",
         "body": [
             "#!/usr/bin/env python3",
             "",
@@ -24,6 +24,17 @@
             "if __name__ == '__main__':",
             "    main()",
             ""
+        ]
+    },
+    "function_comment": {
+        "scope": "python",
+        "prefix": "function_comment",
+        "body": [
+            "$BLOCK_COMMENT_START",
+            "${1:Title}",
+            "",
+            "${2:Description}",
+            "$BLOCK_COMMENT_END"
         ]
     }
 }
