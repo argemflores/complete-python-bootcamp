@@ -179,7 +179,9 @@ def main():
     # process caesar cipher
     result = cipher.caesar(text, num_shifts, direction)
 
-    print(option, text, num_shifts, direction, result)
+    # display original and resulting texts
+    print(cipher.LABELS[option][0], text)
+    print(cipher.LABELS[option][1], result)
 
 if __name__ == '__main__':
     main()
