@@ -1,5 +1,5 @@
 # 21.09
-    - Vigenere / Vernam / Ceasar Ciphers - Functions for encrypting and decrypting data messages. Then send them to a friend.
+    - Vigenere / Vernam / Caesar Ciphers - Functions for encrypting and decrypting data messages. Then send them to a friend.
     - Pig Latin - Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Read Wikipedia for more information on rules.
     - Coin Flip Simulation - Write some code that simulates flipping a single coin however many times the user decides. The code should record the outcomes and count the number of tails and heads.
     - GIF Creator - A program that puts together multiple images (PNGs, JPGs, TIFFs) to make a smooth GIF that can be exported. *ptional: Make the program convert small video files to GIFs as well.
