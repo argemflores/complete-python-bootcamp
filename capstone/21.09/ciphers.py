@@ -22,6 +22,68 @@ class Cipher:
     DIRECTIONS = {'L': '[L] Left', 'R': '[R] Right'}
     LABELS = {'1': [' Plaintext:', 'Ciphertext:'], '2': ['Ciphertext:', ' Plaintext:']}
 
+    @staticmethod
+    def caesar(text, num_shifts, direction):
+        """
+        Caesar cipher
+
+        Substitute each letter in the plaintext with a letter
+        some fixed number of positions down the alphabet.
+
+        With a left shift of 3, D would be replaced by A, E would become B, and so on
+        Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+        Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
+
+        With a right shift of 3, D would be replaced with G, E would become H, and so on
+        Plaintext:  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+        Ciphertext: QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
+        """
+
+        # prepare resulting text
+        result = ''
+
+        # count number of letters A-Z
+        max_num_letters = len(string.ascii_uppercase)
+
+        # process each character in the text
+        for character in text:
+            # get index of capitalized character from the alphabet A-Z
+            index = string.ascii_uppercase.find(character.upper())
+
+            # check if valid alphabet/letter
+            if index >= 0:
+                # valid letter; continue processing
+
+                # process shifts based on the direction
+                if direction == 'L':
+                    # left shift; move N shifts to the left of the index
+                    shifted_index = index - num_shifts
+
+                    # check if shifted index is within range (min: 0)
+                    if shifted_index < 0:
+                        # below 0; wrap around the alphabet, moving to Z
+                        shifted_index = index - num_shifts + max_num_letters
+                elif direction == 'R':
+                    # right shift; move N shifts to the right of the index
+                    shifted_index = index + num_shifts
+
+                    # check if shifted index is within range (max: 25)
+                    if shifted_index >= max_num_letters:
+                        # exceeds 25; wrap around the alphabet, moving to A
+                        shifted_index = index + num_shifts - max_num_letters
+
+                # get the new character from the alphabet using the shifted index
+                new_character = string.ascii_uppercase[shifted_index]
+            else:
+                # invalid (spaces or special characters); character remains unchanged
+                new_character = character
+
+            # add new character to resulting text
+            result += new_character
+
+        # return resulting text
+        return result
+
     def ask_inputs(self):
         """
         Ask input
@@ -114,7 +176,10 @@ def main():
     # ask user inputs
     option, text, num_shifts, direction = cipher.ask_inputs()
 
-    print(option, text, num_shifts, direction)
+    # process caesar cipher
+    result = cipher.caesar(text, num_shifts, direction)
+
+    print(option, text, num_shifts, direction, result)
 
 if __name__ == '__main__':
     main()
