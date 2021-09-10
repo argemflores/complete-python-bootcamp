@@ -19,22 +19,54 @@
             "$BLOCK_COMMENT_END",
             "",
             "def main():",
-            "    pass",
+            "    $BLOCK_COMMENT_START",
+            "    Main function",
+            "",
+            "    Executes the main flow of the script",
+            "    $BLOCK_COMMENT_END",
             "",
             "if __name__ == '__main__':",
             "    main()",
             ""
         ]
     },
-    "function_comment": {
+    "comment_block": {
         "scope": "python",
-        "prefix": "function_comment",
+        "prefix": "comment_block",
         "body": [
             "$BLOCK_COMMENT_START",
             "${1:Title}",
             "",
             "${2:Description}",
             "$BLOCK_COMMENT_END"
+        ]
+    },
+    "ask_input": {
+        "scope": "python",
+        "prefix": "ask_input",
+        "body": [
+            "def ask_input():",
+            "    $BLOCK_COMMENT_START",
+            "    Ask input",
+            "",
+            "    Prompt user for input.",
+            "    Continue asking until valid input is provided.",
+            "    $BLOCK_COMMENT_END",
+            "",
+            "    # continue asking until valid input is provided",
+            "    while True:",
+            "        try:",
+            "            # ask input",
+            "            value = input('Input: ')",
+            "        except ValueError:",
+            "            # invalid: ask again",
+            "            print('Invalid, try again.')",
+            "        else:",
+            "            # valid: exit loop",
+            "            break",
+            "",
+            "    # return input",
+            "    return value"
         ]
     }
 }
