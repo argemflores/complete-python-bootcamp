@@ -94,12 +94,12 @@ class Cipher:
 
         # get keys and values for validation purposes
         keys = self.OPTIONS.keys()
-        values = self.OPTIONS.values()
+        values = ' '.join(self.OPTIONS.values())
 
         # continue asking until valid option is provided
         while True:
             # ask option and strip whitespaces
-            option = input('Choose ({}): '.format(' '.join(values))).strip()
+            option = input('Choose ({}): '.format(values)).strip()
 
             # check option if valid
             if option in keys:
@@ -141,13 +141,13 @@ class Cipher:
 
         # get keys and values for validation purposes
         keys = self.DIRECTIONS.keys()
-        values = self.DIRECTIONS.values()
+        values = ' '.join(self.DIRECTIONS.values())
 
         # continue asking until valid input is provided
         while True:
             try:
                 # ask direction and capitalize input
-                direction = input('Direction ({}): '.format(' '.join(values))).upper()
+                direction = input('Direction ({}): '.format(values)).upper()
 
                 # check if direction is within valid values (L/R)
                 if direction in keys:
