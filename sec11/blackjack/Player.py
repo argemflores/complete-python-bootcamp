@@ -49,13 +49,13 @@ class Player(Person):
 
     """Update bankroll after winning bet"""
     def wins(self, dealer_value):
-        print("\n✅ {} wins!!! Player's value is {} vs. Dealer's {}.".format(self.name, self.value, dealer_value))
+        print("\n😄 {} wins!!! Player's value is {} vs. Dealer's {}.".format(self.name, self.value, dealer_value))
 
         self.bankroll += self.bet
 
     """Update bankroll after losing bet"""
     def loses(self, dealer_value):
-        print("\n❌ {} loses... Player's value is {} vs. Dealer's {}.".format(self.name, self.value, dealer_value))
+        print("\n😭 {} loses... Player's value is {} vs. Dealer's {}.".format(self.name, self.value, dealer_value))
 
         self.bankroll -= self.bet
 
