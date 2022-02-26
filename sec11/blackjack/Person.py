@@ -30,9 +30,11 @@ class Person():
         # get the sum total of all card values in hand
         for card in self.hand:
             if type(card.value) == type([]):
+                # allow Player to decide their Ace's value
                 if self.__class__ == 'Player':
                     card.choose_value()
                 else:
+                    # automatically assign value for Dealer's Ace
                     if self.value + 11 <= 21:
                         card.value = 11
                     else:
