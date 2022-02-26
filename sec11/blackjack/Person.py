@@ -31,7 +31,7 @@ class Person():
         for card in self.hand:
             if type(card.value) == type([]):
                 # allow Player to decide their Ace's value
-                if self.__class__ == 'Player':
+                if 'Player' in str(self.__class__):
                     card.choose_value()
                 else:
                     # automatically assign value for Dealer's Ace

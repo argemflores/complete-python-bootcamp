@@ -12,12 +12,12 @@ deck = Deck()
 deck.shuffle()
 
 # prepare player
-name = input("🧑 Enter player's name (default: 'Player'): ") or "Player"
+name = (input("👤 Enter player's name (default: 'Player'): ") or "Player") + " 👤"
 bankroll = float(input("💰 Enter player's bankroll (default: $100): $") or 100)
 player = Player(name, bankroll)
 
 # prepare dealer
-name = input("👨 Enter dealer's name (default: 'Dealer'): ") or "Dealer"
+name = (input("🤖 Enter dealer's name (default: 'Dealer'): ") or "Dealer") + " 🤖"
 dealer = Dealer(name)
 
 # play until deck runs out of cards or player has no more money in the bankroll
