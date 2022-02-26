@@ -24,7 +24,7 @@ dealer = Dealer(name)
 while len(deck) > 0 and player.bankroll > 0:
     # clear screen and print logo
     # clear()
-    print(art.logo)
+    # print(art.logo)
 
     # empty hands of player and dealer
     player.hand = []
